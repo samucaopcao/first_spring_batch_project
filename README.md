@@ -17,7 +17,7 @@ A forma na qual o Step define sua lógica o categoriza como:
 <br>ItemProcessor = Processamento
 <br>ItemWriter = Escrita
 
-Cada chunk possui sua própria transação, ou seja se ocorrer um erro em um dos chunk todo o trabalho realizado em um chunk anterior estará a salvo.
+Cada chunk possui sua própria transação, ou seja se ocorrer um erro em um dos chunk todo o trabalho realizado em um chunk anterior estará a salvo, isso nos remete a ter mais cuidado em seu fracionamento pois quanto mais pedações os chunks forem divididos mais transações serão criadas podendo sobrecarregar o BD ou o processamento em si.
 
 
 Ao criarmos e rodarmos um Job com conexão via BD, automaticamente tabelas serão criadas no DataBase que a aplicação foi apontada.
