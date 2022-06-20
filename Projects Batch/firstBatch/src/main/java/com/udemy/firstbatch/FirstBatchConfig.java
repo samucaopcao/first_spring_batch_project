@@ -19,7 +19,7 @@ import org.springframework.context.annotation.Configuration;
 @EnableBatchProcessing // Esta anotação que permite que utilizemos injeção e utilize elementos do
 						// Framework
 @Configuration
-public class BatchConfig {
+public class FirstBatchConfig {
 
 	// Para criar jobs devemos utilizar Builders que já estão
 	// inclusos no Spring Batch nesse caso usamos o JobBuilderFactory
