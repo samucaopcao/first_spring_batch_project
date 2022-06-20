@@ -40,7 +40,9 @@ public class BatchConfig {
 	public Step imprimeParImparStep() {
 		return stepBuilderFactory
 				.get("imprimeParImparJob")
-				// Chunk com valor 1 significa que ele tem apenas um registro por pedaço
+				// Chunk com valor 1 significa que ele tem apenas um registro por pedaço,
+				// toda vez que um chunk é criado uma transação no BD é criada, ou seja 
+				// o uso de memória deve ser considerado
 				.<Integer,String>chunk(1)
 				// O reader lê um pedaço de dado
 				.reader(contaAteDez())
